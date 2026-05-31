@@ -1,5 +1,6 @@
 import Cube.Cube;
 import Solver.BFSsolver;
+import Solver.IDDFSsolver;
 
 public class Main {
     static void main() {
@@ -15,12 +16,12 @@ public class Main {
 //        System.out.println(cube.history);
 
         Cube cube = new Cube();
-        cube.scramble(5);
+        cube.scramble(8);
         cube.print();
         System.out.println(cube.history);
         System.out.println();
 
-        String algorithm = BFSsolver.solve(cube);
+        String algorithm = IDDFSsolver.solve(cube);
         System.out.println(algorithm);
         cube.apply(algorithm);
         cube.print();
